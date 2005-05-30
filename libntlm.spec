@@ -8,6 +8,7 @@ Group:		Libraries
 Source0:	http://josefsson.org/libntlm/releases/%{name}-%{version}.tar.gz
 # Source0-md5:	0accca251d70ba59107b0573147e4f59
 URL:		http://josefsson.org/libntlm/
+BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -57,6 +58,9 @@ Statyczna biblioteka libntlm.
 
 %build
 cp -f /usr/share/automake/config.* .
+%{__aclocal}
+%{__autoconf}
+%{__automake}
 %configure
 
 %{__make}
