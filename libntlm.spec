@@ -10,6 +10,7 @@ Source0:	http://josefsson.org/libntlm/releases/%{name}-%{version}.tar.gz
 URL:		http://josefsson.org/libntlm/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -58,6 +59,7 @@ Statyczna biblioteka libntlm.
 
 %build
 cp -f /usr/share/automake/config.* .
+%{__libtoolize}
 %{__aclocal}
 %{__autoconf}
 %{__automake}
