@@ -1,14 +1,14 @@
 Summary:	Library for NTLM authentication
 Summary(pl):	Biblioteka do uwierzytelniania NTLM
 Name:		libntlm
-Version:	0.3.6
+Version:	0.3.7
 Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	http://josefsson.org/libntlm/releases/%{name}-%{version}.tar.gz
-# Source0-md5:	0accca251d70ba59107b0573147e4f59
+# Source0-md5:	67b243c23e4b75ff189d20d855396ec0
 URL:		http://josefsson.org/libntlm/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -34,7 +34,7 @@ serwera IMAP.
 Summary:	Header files for libntlm library
 Summary(pl):	Pliki nag³ówkowe biblioteki libntlm
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for libntlm library.
@@ -46,7 +46,7 @@ Pliki nag³ówkowe biblioteki libntlm.
 Summary:	Static libntlm library
 Summary(pl):	Statyczna biblioteka libntlm
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libntlm library.
@@ -58,9 +58,8 @@ Statyczna biblioteka libntlm.
 %setup -q
 
 %build
-cp -f /usr/share/automake/config.* .
 %{__libtoolize}
-%{__aclocal}
+%{__aclocal} -I m4
 %{__autoconf}
 %{__automake}
 %configure
