@@ -2,7 +2,7 @@ Summary:	Library for NTLM authentication
 Summary(pl):	Biblioteka do uwierzytelniania NTLM
 Name:		libntlm
 Version:	0.3.12
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://josefsson.org/libntlm/releases/%{name}-%{version}.tar.gz
