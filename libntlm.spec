@@ -1,5 +1,5 @@
 Summary:	Library for NTLM authentication
-Summary(pl):	Biblioteka do uwierzytelniania NTLM
+Summary(pl.UTF-8):   Biblioteka do uwierzytelniania NTLM
 Name:		libntlm
 Version:	0.3.12
 Release:	2
@@ -21,37 +21,37 @@ This code was taken mostly from the Samba project and was initially
 intended for use with Microsoft Exchange Server when it is configured
 to require NTLM authentication for clients of its IMAP server.
 
-%description -l pl
-Biblioteka libntlm dostarcza procedury do obróbki struktur u¿ywanych
+%description -l pl.UTF-8
+Biblioteka libntlm dostarcza procedury do obrÃ³bki struktur uÅ¼ywanych
 po stronie klienta mechanizmu uwierzytelniania Microsoft NTLM.
 
-Ten kod pochodzi w wiêkszo¶ci z projektu Samba i pocz±tkowo mia³ byæ
-u¿ywany z serwerem Microsoft Exchange w przypadku, gdy zosta³
-skonfigurowany aby wymagaæ uwierzytelnienia NTLM od klientów swojego
+Ten kod pochodzi w wiÄ™kszoÅ›ci z projektu Samba i poczÄ…tkowo miaÅ‚ byÄ‡
+uÅ¼ywany z serwerem Microsoft Exchange w przypadku, gdy zostaÅ‚
+skonfigurowany aby wymagaÄ‡ uwierzytelnienia NTLM od klientÃ³w swojego
 serwera IMAP.
 
 %package devel
 Summary:	Header files for libntlm library
-Summary(pl):	Pliki nag³ówkowe biblioteki libntlm
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki libntlm
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for libntlm library.
 
-%description devel -l pl
-Pliki nag³ówkowe biblioteki libntlm.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe biblioteki libntlm.
 
 %package static
 Summary:	Static libntlm library
-Summary(pl):	Statyczna biblioteka libntlm
+Summary(pl.UTF-8):   Statyczna biblioteka libntlm
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libntlm library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka libntlm.
 
 %prep
