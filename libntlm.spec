@@ -1,5 +1,5 @@
 Summary:	Library for NTLM authentication
-Summary(pl.UTF-8):   Biblioteka do uwierzytelniania NTLM
+Summary(pl.UTF-8):	Biblioteka do uwierzytelniania NTLM
 Name:		libntlm
 Version:	0.3.12
 Release:	2
@@ -32,7 +32,7 @@ serwera IMAP.
 
 %package devel
 Summary:	Header files for libntlm library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libntlm
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libntlm
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -44,7 +44,7 @@ Pliki nagłówkowe biblioteki libntlm.
 
 %package static
 Summary:	Static libntlm library
-Summary(pl.UTF-8):   Statyczna biblioteka libntlm
+Summary(pl.UTF-8):	Statyczna biblioteka libntlm
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
