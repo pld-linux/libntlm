@@ -1,12 +1,12 @@
 Summary:	Library for NTLM authentication
 Summary(pl.UTF-8):	Biblioteka do uwierzytelniania NTLM
 Name:		libntlm
-Version:	0.4.1
+Version:	0.4.2
 Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://josefsson.org/libntlm/releases/%{name}-%{version}.tar.gz
-# Source0-md5:	1a9c2e9f6cbf762d56981d53fc8e703b
+# Source0-md5:	e68a4e20628de0259b54f59725b9c486
 URL:		http://josefsson.org/libntlm/
 BuildRequires:	autoconf >= 2.61
 BuildRequires:	automake >= 1:1.10
@@ -61,6 +61,7 @@ Statyczna biblioteka libntlm.
 %{__libtoolize}
 %{__aclocal} -I m4
 %{__autoconf}
+%{__autoheader}
 %{__automake}
 %configure
 
