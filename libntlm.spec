@@ -57,6 +57,8 @@ Statyczna biblioteka libntlm.
 %prep
 %setup -q
 
+rm -f m4/{libtool.m4,lt*}
+
 %build
 %{__libtoolize}
 %{__aclocal} -I m4
@@ -64,10 +66,6 @@ Statyczna biblioteka libntlm.
 %{__autoheader}
 %{__automake}
 %configure
-
-# dunno. somewhy config.status writes own libtool which is invalid
-ln -sf %{_bindir}/libtool .
-
 %{__make}
 
 %install
