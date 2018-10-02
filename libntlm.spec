@@ -1,12 +1,12 @@
 Summary:	Library for NTLM authentication
 Summary(pl.UTF-8):	Biblioteka do uwierzytelniania NTLM
 Name:		libntlm
-Version:	1.4
+Version:	1.5
 Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://www.nongnu.org/libntlm/releases/%{name}-%{version}.tar.gz
-# Source0-md5:	54793488450e9085c57e0d859ff3bc8c
+# Source0-md5:	375a3a87d29b61da5466f9b06325ad62
 URL:		http://www.nongnu.org/libntlm/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
