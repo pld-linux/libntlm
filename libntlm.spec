@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	static_libs	# static library
+
 Summary:	Library for NTLM authentication
 Summary(pl.UTF-8):	Biblioteka do uwierzytelniania NTLM
 Name:		libntlm
@@ -8,6 +12,7 @@ Group:		Libraries
 Source0:	https://download.savannah.nongnu.org/releases/libntlm/%{name}-%{version}.tar.gz
 # Source0-md5:	ecb7ffe83a97588e444eafa0d85c3c01
 URL:		https://gitlab.com/gsasl/libntlm/
+BuildRequires:	rpmbuild(macros) >= 1.527
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -55,7 +60,9 @@ Statyczna biblioteka Libntlm.
 %setup -q
 
 %build
-%configure
+%configure \
+	%{__enable_disable static_libs static}
+
 %{__make}
 
 %install
@@ -85,6 +92,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/ntlm.h
 %{_pkgconfigdir}/libntlm.pc
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libntlm.a
+%endif
